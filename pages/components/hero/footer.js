@@ -6,7 +6,9 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 const Footer = () => {
   return (
-    <Container sx={{ height: "fit-content", minHeight: "15vh" }}>
+    <Container
+      sx={{ height: "fit-content", minHeight: "15vh", paddingTop: "0.2rem" }}
+    >
       <Grid container>
         <Grid item xs={4}>
           <Image src="/img/logo.png" width={150} height={50}></Image>

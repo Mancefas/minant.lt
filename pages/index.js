@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Layout from "./components/Layout";
+import Layout from "./components/layout";
+import Hero from "./components/hero/hero";
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
       </Head>
-      <Layout></Layout>
+      <Layout>
+        <Hero />
+      </Layout>
     </>
   );
 }
