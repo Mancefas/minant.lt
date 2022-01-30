@@ -21,7 +21,7 @@ const Posts = (props) => {
         <Grid container gap={2}>
           {posts.map((post) => (
             <Grid
-              item
+              key={post.id}
               item
               xs={7}
               sx={{
