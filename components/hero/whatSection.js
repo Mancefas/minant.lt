@@ -46,6 +46,7 @@ const WhatSection = () => {
         <Grid container>
           {DATA.map((item) => (
             <Grid
+              key={item.id}
               item
               xs={8}
               md={4}
