@@ -13,7 +13,11 @@ const Header = () => {
     >
       <Grid container gap={1}>
         <Grid item xs={3}>
-          <Image src="/img/logo.png" width={350} height={100}></Image>
+          <Link href="/">
+            <a>
+              <Image src="/img/logo.png" width={350} height={100}></Image>
+            </a>
+          </Link>
         </Grid>
         <Grid
           item
@@ -41,7 +45,7 @@ const Header = () => {
           </ul>
           <ul className={classes.ul}>
             <li>
-              <Link href="/">
+              <Link href="/posts">
                 <a>Patarimai</a>
               </Link>
             </li>
