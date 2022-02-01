@@ -1,12 +1,12 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Layout from "../../components/layout";
 
 const SinglePost = (props) => {
   const { posts } = props;
   const router = useRouter();
 
   const possibleSlug = posts.map((item) => item.slug);
-  console.log(possibleSlug);
 
   let singlePost;
 
@@ -15,14 +15,21 @@ const SinglePost = (props) => {
     singlePost = thisPost;
   }
 
+  function createMarkup() {
+    return { __html: singlePost.content.rendered };
+  }
+
   return (
-    <div>
-      {singlePost && (
-        <div>
-          <h3>{singlePost.title.rendered}</h3>
-        </div>
-      )}
-    </div>
+    <Layout>
+      <div>
+        {singlePost && (
+          <div>
+            <h3>{singlePost.title.rendered}</h3>
+            <h4 dangerouslySetInnerHTML={createMarkup()}></h4>
+          </div>
+        )}
+      </div>
+    </Layout>
   );
 };
 
