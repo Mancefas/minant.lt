@@ -1,6 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { Container, Typography } from "@mui/material";
 import Layout from "../../components/layout";
+import parse from "html-react-parser";
 
 const SinglePost = (props) => {
   const { posts } = props;
@@ -15,17 +17,19 @@ const SinglePost = (props) => {
     singlePost = thisPost;
   }
 
-  function createMarkup() {
-    return { __html: singlePost.content.rendered };
-  }
-
   return (
     <Layout>
       <div>
         {singlePost && (
           <div>
-            <h3>{singlePost.title.rendered}</h3>
-            <h4 dangerouslySetInnerHTML={createMarkup()}></h4>
+            <Typography
+              variant="h3"
+              align="center"
+              sx={{ marginBottom: "3rem", marginTop: "2rem" }}
+            >
+              {singlePost.title.rendered}
+            </Typography>
+            <Container>{parse(singlePost.content.rendered)}</Container>
           </div>
         )}
       </div>
