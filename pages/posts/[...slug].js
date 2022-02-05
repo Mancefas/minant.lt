@@ -8,28 +8,28 @@ const SinglePost = (props) => {
   const { posts } = props;
   const router = useRouter();
 
-  const possibleSlug = posts.map((item) => item.slug);
+  // const possibleSlug = posts.map((item) => `/posts/${item.slug}`);
 
-  let singlePost;
+  let snglPost;
 
   if (posts) {
     const thisPost = posts.find((item) => item.slug === router.query.slug[0]);
-    singlePost = thisPost;
+    snglPost = thisPost;
   }
 
   return (
     <Layout>
       <div>
-        {singlePost && (
+        {snglPost && (
           <div>
             <Typography
               variant="h3"
               align="center"
               sx={{ marginBottom: "3rem", marginTop: "2rem" }}
             >
-              {singlePost.title.rendered}
+              {snglPost.title.rendered}
             </Typography>
-            <Container>{parse(singlePost.content.rendered)}</Container>
+            <Container>{parse(snglPost.content.rendered)}</Container>
           </div>
         )}
       </div>
@@ -43,8 +43,9 @@ export async function getStaticPaths() {
       //need to make it dynamic
       // String variant:
       "/posts/minti-ziema",
+      "/posts/dviraciu-tipai",
     ],
-    fallback: true,
+    fallback: false,
   };
 }
 
