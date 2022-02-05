@@ -15,7 +15,12 @@ const Header = () => {
         <Grid item xs={3}>
           <Link href="/">
             <a>
-              <Image src="/img/logo.png" width={350} height={100}></Image>
+              <Image
+                src="/img/logo.png"
+                width={350}
+                height={100}
+                alt="minant.lt logo"
+              ></Image>
             </a>
           </Link>
         </Grid>
@@ -28,7 +33,12 @@ const Header = () => {
             justifyContent: "center",
           }}
         >
-          <Image src="/img/logo2.png" width={150} height={125}></Image>
+          <Image
+            src="/img/logo2.png"
+            width={150}
+            height={125}
+            alt="minant.lt logo"
+          ></Image>
         </Grid>
         <Grid item xs={4} sx={{ display: "flex" }}>
           <ul className={classes.ul}>

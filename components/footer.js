@@ -11,7 +11,12 @@ const Footer = () => {
     >
       <Grid container>
         <Grid item xs={4}>
-          <Image src="/img/logo.png" width={150} height={50}></Image>
+          <Image
+            src="/img/logo.png"
+            width={150}
+            height={50}
+            alt="minant.lt logo"
+          ></Image>
         </Grid>
         <Grid item xs={4} sx={{ display: "flex", justifyContent: "center" }}>
           <h3>
