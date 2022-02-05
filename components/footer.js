@@ -12,7 +12,7 @@ const Footer = () => {
       <Grid container>
         <Grid item xs={4}>
           <Image
-            src="/img/logo.png"
+            src="https://minant.lt/wp-content/uploads/2020/11/Logo-500x500-minant-kojos-e1604950393961-300x100.png"
             width={150}
             height={50}
             alt="minant.lt logo"

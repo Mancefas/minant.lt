@@ -16,7 +16,7 @@ const Header = () => {
           <Link href="/">
             <a>
               <Image
-                src="/img/logo.png"
+                src="https://minant.lt/wp-content/uploads/2020/11/Logo-500x500-minant-kojos-e1604950393961-300x100.png"
                 width={350}
                 height={100}
                 alt="minant.lt logo"
@@ -34,9 +34,9 @@ const Header = () => {
           }}
         >
           <Image
-            src="/img/logo2.png"
-            width={150}
-            height={125}
+            src="https://minant.lt/wp-content/uploads/2020/11/minant.lt-3.png"
+            width={125}
+            height={50}
             alt="minant.lt logo"
           ></Image>
         </Grid>

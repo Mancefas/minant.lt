@@ -7,29 +7,33 @@ const DATA = [
   {
     id: "1",
     text: "Stiprinama širdies sistema",
-    img: "/img/sirdies-darbas-minant.lt_.png",
+    img: "https://minant.lt/wp-content/uploads/2020/11/sirdies-darbas-minant.lt_.png",
   },
   {
     id: "2",
     text: "Stiprinama imuninė sistema",
-    img: "/img/imunine-sistema-minant.lt_.png",
+    img: "https://minant.lt/wp-content/uploads/2020/11/imunine-sistema-minant.lt_.png",
   },
   {
     id: "3",
     text: "Plečiamas socialinis tinklas",
-    img: "/img/soc-minant.lt_.png",
+    img: "https://minant.lt/wp-content/uploads/2020/11/soc-minant.lt_.png",
   },
   {
     id: "4",
     text: "Minant nenaudojamos kaukė",
-    img: "/img/kauke-minant.lt_.png",
+    img: "https://minant.lt/wp-content/uploads/2020/11/kauke-minant.lt_.png",
   },
   {
     id: "5",
     text: "Naikinami nereikalingi kg",
-    img: "/img/figura-minant.lt_.png",
+    img: "https://minant.lt/wp-content/uploads/2020/11/figura-minant.lt_.png",
   },
-  { id: "6", text: "Neišmetama CO2", img: "/img/co2-minant.lt_.png" },
+  {
+    id: "6",
+    text: "Neišmetama CO2",
+    img: "https://minant.lt/wp-content/uploads/2020/11/co2-minant.lt_.png",
+  },
 ];
 
 const WhatSection = () => {
