@@ -14,10 +14,18 @@ const HeroButtons = () => {
         gap: "1rem",
       }}
     >
-      <Button variant="contained" size="large" color="success">
+      <Button
+        variant="contained"
+        size="large"
+        sx={{ backgroundColor: "#71833B", color: "black" }}
+      >
         <DirectionsBikeIcon sx={{ marginRight: "0.5rem" }} /> Maršrutai
       </Button>
-      <Button variant="contained" size="large" color="success">
+      <Button
+        variant="contained"
+        size="large"
+        sx={{ backgroundColor: "#71833B", color: "black" }}
+      >
         <Link href="/posts">
           <a>
             <MenuBookIcon sx={{ marginRight: "0.5rem" }} /> Skaitiniai

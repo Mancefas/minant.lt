@@ -20,7 +20,7 @@ const Footer = () => {
         </Grid>
         <Grid item xs={4} sx={{ display: "flex", justifyContent: "center" }}>
           <h3>
-            Susisiekti <MailIcon />
+            Susisiekti <MailIcon sx={{ color: "#71833B" }} />
           </h3>
         </Grid>
         <Grid

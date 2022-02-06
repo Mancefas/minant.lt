@@ -26,8 +26,9 @@ const Posts = (props) => {
               xs={7}
               sx={{
                 margin: "auto",
-                backgroundColor: "#F5F5F5",
+                backgroundColor: "#d2eec5",
                 padding: "1rem",
+                borderRadius: "10px",
               }}
             >
               <Typography variant="h5">{post.title.rendered}</Typography>

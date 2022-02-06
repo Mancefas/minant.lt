@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Paper } from "@mui/material";
 import Layout from "../../components/layout";
 import parse from "html-react-parser";
 
@@ -25,11 +25,22 @@ const SinglePost = (props) => {
             <Typography
               variant="h3"
               align="center"
-              sx={{ marginBottom: "3rem", marginTop: "2rem" }}
+              sx={{ marginBottom: "1rem", marginTop: "2rem" }}
             >
               {snglPost.title.rendered}
             </Typography>
-            <Container>{parse(snglPost.content.rendered)}</Container>
+            <Container maxWidth="lg">
+              <Paper
+                elevation={3}
+                sx={{
+                  padding: "1rem",
+                  marginBottom: "2rem",
+                  borderRadius: "10px",
+                }}
+              >
+                {parse(snglPost.content.rendered)}
+              </Paper>
+            </Container>
           </div>
         )}
       </div>
