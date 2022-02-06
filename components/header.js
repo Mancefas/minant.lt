@@ -1,16 +1,25 @@
 import classes from "./header.module.css";
+import React, { useState } from "react";
 
-import { Container, Grid } from "@mui/material";
-import React from "react";
+import { Box, LinearProgress, Container, Grid } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
+  const [showLoading, setShowLoading] = React.useState(false);
+
+  const handelLoading = () => {
+    setShowLoading(!showLoading);
+  };
+
   return (
     <Container
       fixed
       sx={{ marginTop: "0.5rem", height: "fit-content", minHeight: "15vh" }}
     >
+      <Box sx={{ width: "100%" }}>
+        {showLoading && <LinearProgress color="success" />}
+      </Box>
       <Grid container gap={1}>
         <Grid item xs={3}>
           <Link href="/">
@@ -56,7 +65,7 @@ const Header = () => {
           <ul className={classes.ul}>
             <li>
               <Link href="/posts">
-                <a>Patarimai</a>
+                <a onClick={handelLoading}>Patarimai</a>
               </Link>
             </li>
           </ul>
