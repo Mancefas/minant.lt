@@ -56,7 +56,7 @@ export async function getStaticPaths() {
       "/posts/minti-ziema",
       "/posts/dviraciu-tipai",
     ],
-    fallback: false,
+    fallback: true,
   };
 }
 

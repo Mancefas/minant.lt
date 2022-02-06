@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Container, Typography } from "@mui/material";
+import { Grid, Container, Typography, Paper } from "@mui/material";
 import Link from "next/link";
 import Layout from "../../components/layout";
 
@@ -18,27 +18,37 @@ const Posts = (props) => {
           marginBottom: "2rem",
         }}
       >
-        <Grid container gap={2}>
+        <Grid container gap={2} sx={{ justifyContent: "center" }}>
           {posts.map((post) => (
             <Grid
               key={post.id}
               item
-              xs={7}
+              md={4}
+              xs={10}
               sx={{
-                margin: "auto",
-                backgroundColor: "#d2eec5",
-                padding: "1rem",
-                borderRadius: "10px",
+                minHeight: "40vh",
+                height: "fit-content",
               }}
             >
-              <Typography variant="h5">{post.title.rendered}</Typography>
-              <Typography variant="subtitle1" color={"red"}>
-                {post.date.slice(0, 10)}
-              </Typography>
-              <Typography variant="subtitle1">
-                {post.excerpt.rendered.slice(3, 100)}...
-              </Typography>
-              <Link href={`/posts/${post.slug}`}>Skaitykite daugiau</Link>
+              <Paper
+                elevation={3}
+                sx={{
+                  minHeight: "40vh",
+                  height: "fit-content",
+
+                  padding: "1rem",
+                  borderRadius: "10px",
+                }}
+              >
+                <Typography variant="h5">{post.title.rendered}</Typography>
+                <Typography variant="subtitle1" color={"red"}>
+                  {post.date.slice(0, 10)}
+                </Typography>
+                <Typography variant="subtitle1">
+                  {post.excerpt.rendered.slice(3, 100)}...
+                </Typography>
+                <Link href={`/posts/${post.slug}`}>Skaitykite daugiau</Link>
+              </Paper>
             </Grid>
           ))}
         </Grid>
