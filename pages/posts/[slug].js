@@ -4,16 +4,17 @@ import { Container, Typography, Paper } from "@mui/material";
 import Layout from "../../components/layout";
 import parse from "html-react-parser";
 
+import { getPostsSlugs } from "../../utils/wordpress";
+
 const SinglePost = (props) => {
   const { posts } = props;
   const router = useRouter();
-
-  // const possibleSlug = posts.map((item) => `/posts/${item.slug}`);
+  const { slug } = router.query;
 
   let snglPost;
 
   if (posts) {
-    const thisPost = posts.find((item) => item.slug === router.query.slug[0]);
+    const thisPost = posts.find((item) => item.slug === slug);
     snglPost = thisPost;
   }
 
@@ -49,14 +50,12 @@ const SinglePost = (props) => {
 };
 
 export async function getStaticPaths() {
+  const gotPaths = await getPostsSlugs();
+
   return {
-    paths: [
-      //need to make it dynamic
-      // String variant:
-      "/posts/minti-ziema",
-      "/posts/dviraciu-tipai",
-    ],
-    fallback: true,
+    paths: gotPaths,
+
+    fallback: false,
   };
 }
 
