@@ -35,9 +35,8 @@ const Posts = (props) => {
       >
         <Grid container gap={2} sx={{ justifyContent: "center" }}>
           {posts.map((post) => (
-            <Link href={`/patarimai/${post.slug}`} passHref>
+            <Link href={`/patarimai/${post.slug}`} passHref key={post.id}>
               <Grid
-                key={post.id}
                 item
                 md={4}
                 xs={10}
