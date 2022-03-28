@@ -37,7 +37,7 @@ const HeroButtons = () => {
           size="large"
           sx={{ backgroundColor: "#71833B", color: "black" }}
         >
-          <Link href="/posts">
+          <Link href="/patarimai">
             <a onClick={handelLoading}>
               <MenuBookIcon sx={{ marginRight: "0.5rem" }} /> Skaitiniai
             </a>
