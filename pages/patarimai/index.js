@@ -35,36 +35,45 @@ const Posts = (props) => {
       >
         <Grid container gap={2} sx={{ justifyContent: "center" }}>
           {posts.map((post) => (
-            <Grid
-              key={post.id}
-              item
-              md={4}
-              xs={10}
-              sx={{
-                minHeight: "40vh",
-                height: "fit-content",
-              }}
-            >
-              <Paper
-                elevation={3}
+            <Link href={`/patarimai/${post.slug}`}>
+              <Grid
+                key={post.id}
+                item
+                md={4}
+                xs={10}
                 sx={{
                   minHeight: "40vh",
                   height: "fit-content",
-
-                  padding: "1rem",
-                  borderRadius: "10px",
+                  cursor: "pointer",
                 }}
               >
-                <Typography variant="h5">{post.title.rendered}</Typography>
-                <Typography variant="subtitle1" color={"red"}>
-                  {post.date.slice(0, 10)}
-                </Typography>
-                <Typography variant="subtitle1">
-                  {post.excerpt.rendered.slice(3, 100)}...
-                </Typography>
-                <Link href={`/patarimai/${post.slug}`}>Skaitykite daugiau</Link>
-              </Paper>
-            </Grid>
+                <Paper
+                  elevation={3}
+                  sx={{
+                    minHeight: "40vh",
+                    height: "fit-content",
+                    padding: "1rem",
+                    borderRadius: "10px",
+                  }}
+                >
+                  <Typography variant="h5">{post.title.rendered}</Typography>
+                  <Typography variant="subtitle1" color={"red"}>
+                    {post.date.slice(0, 10)}
+                  </Typography>
+                  <Typography variant="subtitle1">
+                    {post.excerpt.rendered.slice(3, 100)}...
+                  </Typography>
+
+                  <Typography
+                    align="center"
+                    sx={{ marginTop: "1rem" }}
+                    color={"red"}
+                  >
+                    Skaitykite daugiau
+                  </Typography>
+                </Paper>
+              </Grid>
+            </Link>
           ))}
         </Grid>
       </Container>
