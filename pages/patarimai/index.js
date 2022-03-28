@@ -62,7 +62,7 @@ const Posts = (props) => {
                 <Typography variant="subtitle1">
                   {post.excerpt.rendered.slice(3, 100)}...
                 </Typography>
-                <Link href={`/posts/${post.slug}`}>Skaitykite daugiau</Link>
+                <Link href={`/patarimai/${post.slug}`}>Skaitykite daugiau</Link>
               </Paper>
             </Grid>
           ))}

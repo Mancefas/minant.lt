@@ -64,7 +64,7 @@ const Header = () => {
           </ul>
           <ul className={classes.ul}>
             <li>
-              <Link href="/posts">
+              <Link href="/patarimai">
                 <a onClick={handelLoading}>Patarimai</a>
               </Link>
             </li>
