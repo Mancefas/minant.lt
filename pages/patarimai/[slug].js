@@ -4,6 +4,8 @@ import { Container, Typography, Paper } from "@mui/material";
 import Layout from "../../components/layout";
 import parse from "html-react-parser";
 
+import classes from "./singlePost.module.css";
+
 import { getPostsSlugs } from "../../utils/wordpress";
 
 const SinglePost = (props) => {
@@ -22,7 +24,7 @@ const SinglePost = (props) => {
     <Layout>
       <div>
         {snglPost && (
-          <div>
+          <div className={classes.post}>
             <Typography
               variant="h3"
               align="center"
@@ -65,6 +67,7 @@ export async function getStaticProps() {
 
   return {
     props: { posts },
+    revalidate: 10,
   };
 }
 
